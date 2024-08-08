@@ -35,8 +35,10 @@ def main():
         elif choice == '5':
             check_budget()
         elif choice == '6':
-            plot_expenses()
-            plot_income_vs_expenses()
+            expenses = get_expenses()
+            income = get_income()
+            plot_expenses(expenses)
+            plot_income_vs_expenses(income, expenses)
         elif choice == '7':
             break
         else:
