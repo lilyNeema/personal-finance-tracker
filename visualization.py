@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-def plot_expenses():
+def plot_expenses(expenses):
     categories = [exp["category"] for exp in expenses]
     amounts = [exp["amount"] for exp in expenses]
     plt.figure(figsize=(10, 5))
@@ -10,7 +10,7 @@ def plot_expenses():
     plt.ylabel("Amount")
     plt.show()
 
-def plot_income_vs_expenses():
+def plot_income_vs_expenses(income, expenses):
     total_income = sum(inc["amount"] for inc in income)
     total_expenses = sum(exp["amount"] for exp in expenses)
     labels = ['Income', 'Expenses']
